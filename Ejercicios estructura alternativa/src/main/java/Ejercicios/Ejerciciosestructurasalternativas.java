@@ -106,6 +106,7 @@ public class Ejerciciosestructurasalternativas {
                 else
                     System.out.println("" + num2 + "" + num1 + "" + num);
                 break;
+            case 14:
 
 
         }
