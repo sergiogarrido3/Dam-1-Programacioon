@@ -1,5 +1,8 @@
 package Ejercicios;
 
+import jdk.swing.interop.SwingInterOpUtils;
+
+import javax.lang.model.element.NestingKind;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -107,6 +110,24 @@ public class Ejerciciosestructurasalternativas {
                     System.out.println("" + num2 + "" + num1 + "" + num);
                 break;
             case 14:
+                System.out.println("Digame cuantas uvas de un tipo quieres y di si al tamaño 1 o 2");
+                System.out.print("Uvas tipo A: ");
+                int uvasA=sc.nextInt();
+                System.out.println("Uvas tipo B: ");
+                int uvasB=sc.nextInt();
+                System.out.println("Uvas tamaño 1: ");
+                String uvastamaño1 =sc.nextLine();
+                System.out.println("Uvas tamaño 2: ");
+                String uvastamaño2 =sc.nextLine();
+                if (uvasA>0 && uvastamaño1.equalsIgnoreCase("si"))
+                System.out.println("Tus ganancias son: "+uvasA*20+"Cents");
+                if (uvasA>0 && uvastamaño2.equalsIgnoreCase("si"))
+                    System.out.println("Tus ganancias son: "+uvasA*30+"Cents");
+                if (uvasB>0 && uvastamaño1.equalsIgnoreCase("si"))
+                    System.out.println("Tus ganancias son: "+uvasB*(-30)+"Cents");
+                if (uvasB>0 && uvastamaño2.equalsIgnoreCase("si"))
+                    System.out.println("Tus ganancias son: "+uvasB*(-50)+"Cents");
+
 
 
         }
