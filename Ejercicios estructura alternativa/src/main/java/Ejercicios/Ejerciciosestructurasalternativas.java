@@ -94,18 +94,114 @@ public class Ejerciciosestructurasalternativas {
                 num1 = sc.nextInt();
                 num2 = sc.nextInt();
                 if (num >= num1 && num1 >= num2)
-                    System.out.println("" + num + "" + num1 + "" + num2);
+                    System.out.println("" + num + "," + num1 + "," + num2);
                 else if (num >= num2 && num2 >= num1)
-                    System.out.println("" + num + "" + num2 + "" + num1);
+                    System.out.println("" + num + "," + num2 + "," + num1);
                 else if (num1 >= num && num >= num2)
-                    System.out.println("" + num1 + "" + num + "" + num2);
+                    System.out.println("" + num1 + "," + num + "," + num2);
                 else if (num1 >= num2 && num2 >= num)
-                    System.out.println("" + num1 + "" + num2 + "" + num);
+                    System.out.println("" + num1 + "," + num2 + "," + num);
                 else if (num2 >= num && num >= num1)
-                    System.out.println("" + num2 + "" + num + "" + num1);
+                    System.out.println("" + num2 + "," + num + "," + num1);
                 else
-                    System.out.println("" + num2 + "" + num1 + "" + num);
+                    System.out.println("" + num2 + "," + num1 + "," + num);
                 break;
+            case 15:
+                System.out.print("Cuantos alumnos hay: ");
+                int alumnos = sc.nextInt();
+                if (alumnos >= 100)
+                    System.out.println("El coste del bus seria: "+alumnos*65+"€ y cada alumno pagara 65€");
+                else if (alumnos <=99 && alumnos>=50)
+                    System.out.println("El coste del bus seria: "+alumnos*70+"€ y cada alumno pagara 70€");
+                else if (alumnos <= 49 && alumnos>=30)
+                    System.out.println("El coste del bus seria: "+alumnos*95+"€ y cada alumno pagara 95€");
+                else
+                    System.out.println("El coste del bus seria: 4000€ y cada alumno pagara "+4000/alumnos);
+                break;
+            case 16:
+                System.out.print("¿Cuanto tiempo va duro la llamada? ");
+                int tiempollamada = sc.nextInt();
+                System.out.print("¿Es por la mañana o por la tarde?");
+                String horario = sc.next();
+                System.out.print("¿Es Domingo si o no?");
+                String domingo = sc.next();
+                switch (tiempollamada) {
+                    case 1: case 2: case 3: case 4: case 5:
+                        if (domingo.equalsIgnoreCase("si"))
+                            System.out.println("El costo de la llamada es "+ (100*tiempollamada*103)/100+"Cents");
+                        else if (horario.equalsIgnoreCase("mañana") && domingo.equalsIgnoreCase("no"))
+                            System.out.println("El costo de la llamada es "+ (100*tiempollamada*115)/100+"Cents");
+                        else if (horario.equalsIgnoreCase("tarde") && domingo.equalsIgnoreCase("no"))
+                            System.out.println("El costo de la llamada es "+ (100*tiempollamada*110)/100+"Cents");
+                        break;
+
+                    case 6: case 7: case 8:
+                        if (domingo.equalsIgnoreCase("si"))
+                            System.out.println("El costo de la llamada es "+ (80*tiempollamada*103)/100+"Cents");
+                        else if (horario.equalsIgnoreCase("mañana") && domingo.equalsIgnoreCase("no"))
+                            System.out.println("El costo de la llamada es "+ (80*tiempollamada*115)/100+"Cents");
+                        else if (horario.equalsIgnoreCase("tarde") && domingo.equalsIgnoreCase("no"))
+                            System.out.println("El costo de la llamada es "+ (80*tiempollamada*110)/100+"Cents");
+                        break;
+                    case 9: case 10:
+                        if (domingo.equalsIgnoreCase("si"))
+                            System.out.println("El costo de la llamada es "+ (70*tiempollamada*103)/100+"Cents");
+                        else if (horario.equalsIgnoreCase("mañana") && domingo.equalsIgnoreCase("no"))
+                            System.out.println("El costo de la llamada es "+ (70*tiempollamada*115)/100+"Cents");
+                        else if (horario.equalsIgnoreCase("tarde") && domingo.equalsIgnoreCase("no"))
+                            System.out.println("El costo de la llamada es "+ (70*tiempollamada*110)/100+"Cents");
+                        break;
+                    default:
+                        if (domingo.equalsIgnoreCase("si"))
+                            System.out.println("El costo de la llamada es "+ (50*tiempollamada*103)/100+"Cents");
+                        else if (horario.equalsIgnoreCase("mañana") && domingo.equalsIgnoreCase("no"))
+                            System.out.println("El costo de la llamada es "+ (50*tiempollamada*115)/100+"Cents");
+                        else if (horario.equalsIgnoreCase("tarde") && domingo.equalsIgnoreCase("no"))
+                            System.out.println("El costo de la llamada es "+ (50*tiempollamada*110)/100+"Cents");
+                        break;
+
+
+                }
+            case 17:
+                System.out.println("Introduce un numero del dado: ");
+                int numerodeldado = sc.nextInt();
+                switch (numerodeldado){
+                    case 1:
+                        System.out.println("En la cara opuesta esta el numero 6");
+                        break;
+                    case 2:
+                        System.out.println("En la cara opuesta esta el numero 5");
+                        break;
+                    case 3:
+                        System.out.println("En la cara opuesta esta el numero 4");
+                        break;
+                    case 4:
+                        System.out.println("En la cara opuesta esta el numero 3");
+                        break;
+                    case 5:
+                        System.out.println("En la cara opuesta esta el numero 2");
+                        break;
+                    case 6:
+                        System.out.println("En la cara opuesta esta el numero 1");
+                        break;
+                    default:
+                        System.out.println("ERROR: numero incorrecto");
+                }
+            case 18:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         }
